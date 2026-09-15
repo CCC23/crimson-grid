@@ -190,7 +190,8 @@
 	check_flags = DISC_CHECK_CONSCIOUS | DISC_CHECK_CAPABLE
 	target_type = TARGET_LIVING
 	range = 7
-	vitae_cost = 0
+	vitae_cost = 2 // CRIMSON EDIT ADDED VITATE COST OF 3
+	cooldown_length  = 120 SECONDS //CRIMSON ADD ADDED COOLDOWN TO ABILITY
 
 	violates_masquerade = FALSE
 	var/datum/storyteller_roll/psychomania/psychomania_roll
