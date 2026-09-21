@@ -121,7 +121,7 @@
 /datum/discipline_power/serpentis/the_tongue_of_the_asp/activate(mob/living/target)
 	. = ..()
 	target.adjust_blood_pool(-2)
-	target.apply_damage(12 * successes, BRUTE)
+	target.apply_damage(12 * successes, BRUTE)//CRIMSON GRID CHANGE MADE BRUTE DAMAGE
 	owner.adjust_blood_pool(2)
 	var/obj/item/ammo_casing/magic/tentacle/casing = new (get_turf(owner))
 	casing.fire_casing(target, owner, null, null, null, ran_zone(), 0,  owner)
