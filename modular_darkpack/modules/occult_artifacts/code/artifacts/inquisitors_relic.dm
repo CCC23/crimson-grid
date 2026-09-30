@@ -32,7 +32,6 @@
 	worn_icon = 'modular_darkpack/modules/occult_artifacts/icons/fetishes_worn.dmi'//if litterally anyone has better sprites replace this
 	worn_icon_state = "bangle"
 	slot_flags = ITEM_SLOT_GLOVES
-	var/rank = 3//Dont want it to be toooo common
 	research_value = 1 //Shouldnt be applicable except for rare cases
 	var/datum/mind/granted_mind
 	var/previous_holy_role = NONE
