@@ -24,6 +24,8 @@
 	return ..()
 
 /obj/item/occult_artifact/holy/inquisitors_relic
+	name = "silver ring"
+	desc = "A old silver ring"
 	true_name = "Ring of Chrysostom"
 	true_desc = "Grants the wearer access to the power of true faith when worn"
 	icon_state = "silver_ring"
