@@ -168,7 +168,8 @@
 	name = "random garou fetish"
 	loot = list(
 		/obj/item/occult_artifact/werewolf/nyxs_bangle = 33,
-		/obj/item/occult_artifact/werewolf/dagger_of_retribution = 33,
+		/obj/item/occult_artifact/werewolf/dagger_of_retribution = 30,//Reduced from 33 once inquistor relic is added to a dedicated spawn pool 
+		/obj/item/occult_artifact/holy/inquisitors_relic = 3, // In temporarily until actual spawner is mapped anywhere to allow relic to actually exist
 		/obj/item/occult_artifact/werewolf/magpies_ears = 33,
 		/obj/effect/spawner/random/occult/artifact/klaive = 1,
 	)
