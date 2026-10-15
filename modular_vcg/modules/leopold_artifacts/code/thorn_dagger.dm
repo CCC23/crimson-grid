@@ -6,7 +6,7 @@
 
 	icon = 'modular_vcg/modules/leopold_artifacts/icons/relics.dmi'
 	icon_state = "thorn_dagger"
-	inhand_icon_state = "thorn_dagger"
+	inhand_icon_state = "knife"
 	lefthand_file = 'modular_darkpack/modules/deprecated/icons/lefthand.dmi'
 	righthand_file = 'modular_darkpack/modules/deprecated/icons/righthand.dmi'
 	worn_icon = 'modular_darkpack/modules/weapons/icons/worn_melee.dmi'
