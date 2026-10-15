@@ -74,7 +74,7 @@
 
 
 
-/obj/item/occult_artifact/holy/crusaders_sword/proc/update_wielder_bonuses(mob/user)
+/obj/item/occult_artifact/holy/crusader_sword/proc/update_wielder_bonuses(mob/user)
 	remove_wielder_bonuses()
 
 	if(!identified || !isliving(user) || !user?.mind?.holy_role)
@@ -87,7 +87,7 @@
 	empowered_wielder.st_add_stat_mod(STAT_STRENGTH, 1, src)// Reduced from tabletop being +5 Potence 5 is not free im not that crazy
 	empowered_wielder.st_add_stat_mod(STAT_PERMANENT_WILLPOWER, 3, src)//Replicate Iron will/True Faith 3 Turns out using dominate on the crusader is a bad idea 
 
-/obj/item/occult_artifact/holy/crusaders_sword/equipped(mob/user, slot, initial = FALSE)
+/obj/item/occult_artifact/holy/crusader_sword/equipped(mob/user, slot, initial = FALSE)
 	. = ..()
 
 	if(slot & ITEM_SLOT_HANDS)
@@ -95,22 +95,22 @@
 	else
 		remove_wielder_bonuses()
 
-/obj/item/occult_artifact/holy/crusaders_sword/dropped(mob/user, silent = FALSE)
+/obj/item/occult_artifact/holy/crusader_sword/dropped(mob/user, silent = FALSE)
 	remove_wielder_bonuses()
 	. = ..()
 
-/obj/item/occult_artifact/holy/crusaders_sword/Destroy()
+/obj/item/occult_artifact/holy/crusader_sword/Destroy()
 	remove_wielder_bonuses()
 	return ..()
 
-/obj/item/occult_artifact/holy/crusaders_sword/identify(mob/living/artifact_identifier)
+/obj/item/occult_artifact/holy/crusader_sword/identify(mob/living/artifact_identifier)
 	. = ..()
 
 	//Allows you to identify even when holding sword
 	if(identified && ismob(loc))
 		update_wielder_bonuses(loc)
 
-/obj/item/occult_artifact/holy/crusaders_sword/attack_self(mob/user, modifiers)
+/obj/item/occult_artifact/holy/crusader_sword/attack_self(mob/user, modifiers)
 	//if not identified dont flashbang
 	if(!identified)
 		return ..()
@@ -136,7 +136,7 @@
 	for(var/mob/living/victim in get_hearers_in_view(4, src))
 		holy_bang(victim, empowered_wielder)
 
-/obj/item/occult_artifact/holy/crusaders_sword/proc/holy_bang(mob/living/victim, mob/living/user)
+/obj/item/occult_artifact/holy/crusader_sword/proc/holy_bang(mob/living/victim, mob/living/user)
 	if(victim.stat == DEAD || victim == user || victim.mind?.holy_role)
 		return
 
