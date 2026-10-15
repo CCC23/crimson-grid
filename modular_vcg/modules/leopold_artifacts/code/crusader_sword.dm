@@ -13,6 +13,8 @@
 	worn_icon_state = "crusader_sword"
 	ONFLOOR_ICON_HELPER('modular_vcg/modules/leopold_artifacts/icons/relic_floor.dmi')
 	var/mob/living/empowered_wielder
+	var/holy_abilities_active = FALSE
+	COOLDOWN_DECLARE(holy_flash_timer)
 	COOLDOWN_DECLARE(holy_flash_timer)
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT
