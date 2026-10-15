@@ -35,4 +35,4 @@
 		return
 
 	victim.adjust_blood_pool(-1)
-	to_chat(victim, span_userdanger("You bleed from every orifice you loose a blood point"))
+	to_chat(victim, span_userdanger("You bleed from every orifice! You lose a blood point."))
