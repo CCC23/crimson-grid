@@ -15,7 +15,6 @@
 	var/mob/living/empowered_wielder
 	var/holy_abilities_active = FALSE
 	COOLDOWN_DECLARE(holy_flash_timer)
-	COOLDOWN_DECLARE(holy_flash_timer)
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BELT
 	sharpness = SHARP_EDGED
@@ -30,6 +29,13 @@
 
 	// Separate from identification: disabling powers never unidentifies it.
 	var/holy_abilities_active = FALSE
+
+/obj/item/occult_artifact/holy/crusader_sword/proc/remove_wielder_bonuses()
+	if(!QDELETED(empowered_wielder))
+		empowered_wielder.st_remove_stat_mod(STAT_STRENGTH, src)
+		empowered_wielder.st_remove_stat_mod(STAT_PERMANENT_WILLPOWER, src)
+
+	empowered_wielder = null
 
 /obj/item/occult_artifact/holy/crusader_sword/proc/set_holy_abilities(active)
 	holy_abilities_active = active
