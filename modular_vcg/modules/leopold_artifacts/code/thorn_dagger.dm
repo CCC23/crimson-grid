@@ -31,7 +31,7 @@
 		return
 
 	var/mob/living/victim = target
-	if(victim.stat == DEAD || victim.bloodpool <= 0)
+	if(victim.stat == DEAD || victim.bloodpool <= 1)
 		return
 
 	victim.adjust_blood_pool(-1)
