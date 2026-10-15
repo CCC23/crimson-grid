@@ -50,7 +50,7 @@
 		return
 
 	holy_abilities_active = TRUE
-	force = 2.5 LETHAL_TTRPG_DAMAGE
+	force = 2 LETHAL_TTRPG_DAMAGE
 	damtype = AGGRAVATED
 
 	empowered_wielder = wielder
