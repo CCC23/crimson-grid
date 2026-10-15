@@ -8466,6 +8466,7 @@
 #include "modular_vcg\modules\leopold_artifacts\code\crusader_sword.dm"
 #include "modular_vcg\modules\leopold_artifacts\code\inquisitors_relic.dm"
 #include "modular_vcg\modules\leopold_artifacts\code\thorn_dagger.dm"
+#include "modular_vcg\modules\loadout\code\categories\heads.dm"
 #include "modular_vcg\modules\loadout\code\categories\pocket.dm"
 #include "modular_vcg\modules\loadout\code\categories\shoes.dm"
 #include "modular_vcg\modules\loadout\code\categories\suit.dm"
