@@ -9,7 +9,7 @@
 	inhand_icon_state = "crusader_sword"
 	lefthand_file = 'modular_vcg/modules/leopold_artifacts/icons/relic_inhand_left.dmi'
 	righthand_file = 'modular_vcg/modules/leopold_artifacts/icons/relic_inhand_right.dmi'
-	worn_icon = 'modular_vcg/modules/leopold_artifacts/icons/relic_worn.dmi'
+	worn_icon = 'modular_vcg/modules/leopold_artifacts/icons/relics_worn.dmi'
 	worn_icon_state = "crusader_sword"
 	ONFLOOR_ICON_HELPER('modular_vcg/modules/leopold_artifacts/icons/relic_floor.dmi')
 	var/mob/living/empowered_wielder
