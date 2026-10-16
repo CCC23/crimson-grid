@@ -13,6 +13,7 @@
 	worn_icon_state = "crusader_sword"
 	ONFLOOR_ICON_HELPER('modular_vcg/modules/leopold_artifacts/icons/relic_floor.dmi')
 	w_class = WEIGHT_CLASS_BULKY
+   	attack_difficulty = 6
 	slot_flags = ITEM_SLOT_BELT
 	sharpness = SHARP_EDGED
 	hitsound = 'sound/items/weapons/slash.ogg'
