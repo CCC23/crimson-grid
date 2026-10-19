@@ -21,7 +21,7 @@
 	attack_verb_continuous = list("slashes", "cuts")
 	attack_verb_simple = list("slash", "cut")
 	force = 1.5 LETHAL_TTRPG_DAMAGE
-	damtype = AGGRAVATED
+	damtype = BRUTE//Changed to brute blood stealer 9000 still works tho for shankin
 	research_value = 0
 	attack_speed = 0.4 SECONDS //Increases attack speed to increase use cases from crusader sword also speed shanking
 
