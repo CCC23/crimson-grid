@@ -27,7 +27,7 @@
 
 /obj/item/occult_artifact/holy/thorn_dagger/afterattack(atom/target, mob/user, list/modifiers, list/attack_modifiers)
 	. = ..()
-	if(!isliving(target))
+	if(!identified ||!isliving(target))
 		return
 
 	var/mob/living/victim = target
