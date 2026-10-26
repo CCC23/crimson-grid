@@ -6,13 +6,12 @@
 
 	icon = 'modular_vcg/modules/leopold_artifacts/icons/relics.dmi'
 	icon_state = "thorn_dagger"
-	inhand_icon_state = "knife"
-	lefthand_file = 'modular_darkpack/modules/deprecated/icons/lefthand.dmi'
-	righthand_file = 'modular_darkpack/modules/deprecated/icons/righthand.dmi'
-	worn_icon = 'modular_darkpack/modules/weapons/icons/worn_melee.dmi'
-	worn_icon_state = "knife"
-	ONFLOOR_ICON_HELPER('modular_darkpack/modules/weapons/icons/weapons_onfloor.dmi')
-	ONFLOOR_ICONSTATE_HELPER("knife")
+	inhand_icon_state = "thorn_dagger"
+	lefthand_file = 'modular_vcg/modules/leopold_artifacts/icons/relic_inhand_left.dmi'
+	righthand_file = 'modular_vcg/modules/leopold_artifacts/icons/relic_inhand_right.dmi'
+	worn_icon = 'modular_vcg/modules/leopold_artifacts/icons/relics_worn.dmi'
+	worn_icon_state = "thorn_dagger"
+	ONFLOOR_ICON_HELPER('modular_vcg/modules/leopold_artifacts/icons/relic_floor.dmi')
 
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
