@@ -1,6 +1,6 @@
 /obj/structure/retail/triad
 	desc = "Im in a very Chinese Time in my Life"
-	var/owner_needed = False
+	owner_needed = FALSE
 	product_types = list(
 	new /datum/data/vending_product("smuggled demoltion charges", /obj/item/grenade/c4, 1000),
 	new /datum/data/vending_product("Reliable Trustworthy Type-74", /obj/item/gun/ballistic/automatic/darkpack/ak74, 2250),
@@ -24,3 +24,4 @@
 	new /datum/data/vending_product("Type 74 Boiled Round", /obj/item/ammo_box/darkpack/c545/incendiary, 4000),
 	//Incinidary Rounds remove these from warehouse keep 5.56 and 50bmg as the triad does not have them
 )
+
