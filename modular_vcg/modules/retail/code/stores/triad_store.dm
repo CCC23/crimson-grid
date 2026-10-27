@@ -1,7 +1,7 @@
 /obj/structure/retail/triad
 	desc = "Im in a very Chinese Time in my Life"
 	owner_needed = FALSE
-	product_types = list(
+	product_list = list(
 	new /datum/data/vending_product("smuggled demoltion charges", /obj/item/grenade/c4, 1000),
 	new /datum/data/vending_product("Reliable Trustworthy Type-74", /obj/item/gun/ballistic/automatic/darkpack/ak74, 2250),
 	new /datum/data/vending_product("Type-74 Magazine Very Cheap", /obj/item/ammo_box/magazine/darkpack545, 100),
