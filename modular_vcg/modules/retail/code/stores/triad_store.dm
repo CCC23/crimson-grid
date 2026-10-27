@@ -24,9 +24,3 @@
 	new /datum/data/vending_product("Type 74 Boiled Round", /obj/item/ammo_box/darkpack/c545/incendiary, 4000),
 	//Incinidary Rounds remove these from warehouse keep 5.56 and 50bmg as the triad does not have them
 )
-
-
-/obj/structure/retail/triad_shop/can_shop(mob/user)
-	var/datum/job/vampire/assigned_role = user.mind?.assigned_role
-	if(assigned_role && (/datum/job_department/triad))
-		return TRUE
