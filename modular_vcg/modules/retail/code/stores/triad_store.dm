@@ -28,5 +28,5 @@
 
 /obj/structure/retail/triad_shop/can_shop(mob/user)
 	var/datum/job/vampire/assigned_role = user.mind?.assigned_role
-	if(assigned_role && (/datum/job_department/triad in assigned_role.departments_list))
+	if(assigned_role && (/datum/job_department/triad))
 		return TRUE
