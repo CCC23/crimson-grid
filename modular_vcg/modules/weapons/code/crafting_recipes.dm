@@ -11,3 +11,19 @@
 	result = /obj/item/grenade/pipebomb
 	category = CAT_WEAPON_RANGED
 	skill_dots_minimum = 3
+
+
+
+/datum/crafting_recipe/pipebomb_ied
+	name = "Improvised Explosive Device"
+	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	time = 50
+	reqs = list(
+	/obj/item/soil_sack/rich = 1,
+	/obj/item/stack/cable_coil = 15,
+	/obj/item/smartphone = 1,
+	/obj/item/shard = 2
+	,/obj/item/grenade/pipebomb = 1)
+	result = /obj/item/grenade/c4/pipebomb_ied
+	category = CAT_WEAPON_RANGED
+	skill_dots_minimum = 4
