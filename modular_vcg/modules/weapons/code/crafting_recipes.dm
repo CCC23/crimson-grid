@@ -27,3 +27,10 @@
 	result = /obj/item/grenade/c4/pipebomb_ied
 	category = CAT_WEAPON_RANGED
 	skill_dots_minimum = 4
+/datum/crafting_recipe/pipe
+	name = "a pipe"
+	tool_behaviors = list(TOOL_WRENCH)
+	result = /obj/item/pipe/quaternary/pipe/crafted
+	reqs = list(/obj/item/stack/sheet/iron = 1)
+	time = 0.5 SECONDS
+	category = CAT_WEAPON_RANGED

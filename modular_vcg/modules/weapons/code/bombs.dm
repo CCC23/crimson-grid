@@ -63,8 +63,9 @@
 	lefthand_file = 'modular_vcg/modules/weapons/icons/bombs_lefthand.dmi'
 	righthand_file = 'modular_vcg/modules/weapons/icons/bombs_righthand.dmi'
 	ONFLOOR_ICON_HELPER('modular_vcg/modules/weapons/icons/bomb_onfloor.dmi')
-	boom_sizes = list(0, 1, 1)
+	boom_sizes = list(0, 1, 3)
 	w_class = WEIGHT_CLASS_NORMAL
+	shrapnel_type = /obj/projectile/bullet/shrapnel
 	shrapnel_radius = 1
 /obj/item/grenade/c4/pipebomb_ied/Initialize(mapload)
 	plastic_overlay = mutable_appearance(icon, "[icon]2", HIGH_OBJ_LAYER)
