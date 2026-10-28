@@ -66,7 +66,8 @@
 	boom_sizes = list(0, 1, 1)
 	w_class = WEIGHT_CLASS_NORMAL
 	shrapnel_radius = 1
-	/obj/item/grenade/c4/pipebomb_ied/Initialize(mapload)
+
+/obj/item/grenade/c4/pipebomb_ied/Initialize(mapload)
 		plastic_overlay = mutable_appearance(icon, "[icon]2", HIGH_OBJ_LAYER)
 			. = ..()
 /obj/item/grenade/c4/pipebomb_ied/fire_act(exposed_temperature, exposed_volume)
