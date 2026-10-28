@@ -69,6 +69,6 @@
 
 /obj/item/grenade/c4/pipebomb_ied/Initialize(mapload)
 	plastic_overlay = mutable_appearance(icon, "[icon]2", HIGH_OBJ_LAYER)
-		. = ..()
+	. = ..()
 /obj/item/grenade/c4/pipebomb_ied/fire_act(exposed_temperature, exposed_volume)
 	detonate()//The pipebomb storage has gone up in smoke and blown up the entire factory
