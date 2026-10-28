@@ -1,7 +1,7 @@
 /datum/crafting_recipe/pipebomb
 	name = "Pipe Bomb"
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
-	time = 50
+	time = 500
 	reqs = list(/obj/item/stack/sheet/iron = 10,
 	/obj/item/stack/sheet/cloth = 1,
 	/obj/item/gas_can = 1,
@@ -17,7 +17,7 @@
 /datum/crafting_recipe/pipebomb_ied
 	name = "Improvised Explosive Device"
 	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
-	time = 50
+	time = 500
 	reqs = list(
 	/obj/item/soil_sack/rich = 1,
 	/obj/item/stack/cable_coil = 15,
