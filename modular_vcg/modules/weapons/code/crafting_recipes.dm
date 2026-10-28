@@ -10,7 +10,7 @@
 	/obj/item/shard = 2)
 	result = /obj/item/grenade/pipebomb
 	category = CAT_WEAPON_RANGED
-	category = CRAFT_SKIP_MATERIALS_PARITY
+	crafting_flags = CRAFT_SKIP_MATERIALS_PARITY
 	skill_dots_minimum = 3
 
 
@@ -27,6 +27,7 @@
 	,/obj/item/grenade/pipebomb = 1)
 	result = /obj/item/grenade/c4/pipebomb_ied
 	category = CAT_WEAPON_RANGED
+	crafting_flags = CRAFT_SKIP_MATERIALS_PARITY
 	skill_dots_minimum = 4
 /datum/crafting_recipe/pipe
 	name = "a pipe"
@@ -35,4 +36,5 @@
 	reqs = list(/obj/item/stack/sheet/iron = 1)
 	time = 0.5 SECONDS
 	category = CAT_WEAPON_RANGED
-	category = CRAFT_SKIP_MATERIALS_PARITY
+	crafting_flags = CRAFT_SKIP_MATERIALS_PARITY
+
