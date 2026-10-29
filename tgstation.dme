@@ -8524,7 +8524,6 @@
 #include "modular_vcg\modules\ritual_thaumaturgy\rituals\expedient_paperwork.dm"
 #include "modular_vcg\modules\ritual_thaumaturgy\rituals\spear_of_damnation.dm"
 #include "modular_vcg\modules\roofs\code\roofs.dm"
-#include "modular_vcg\modules\thaumaturgical_sense\code\magic_sense.dm"
 #include "modular_vcg\modules\toggle_looc\code\looc_toggle.dm"
 #include "modular_vcg\modules\vampire_the_masquerade\code\vampire_clan\clans\old_clan_tzimisce.dm"
 #include "modular_vcg\modules\vampire_the_masquerade\code\vampire_clan\clans\true_brujah.dm"
@@ -8534,5 +8533,6 @@
 #include "modular_vcg\modules\weapons\code\guns.dm"
 #include "modular_vcg\modules\weapons\code\melee.dm"
 #include "modular_vcg\modules\weapons\code\projectiles.dm"
+#include "modular_vcg\modules\retail\code\stores\triad_store.dm"
 #include "modular_vcg\modules\wyrm\taint.dm"
 // END_INCLUDE
