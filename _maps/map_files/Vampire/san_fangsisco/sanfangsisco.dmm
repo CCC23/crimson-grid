@@ -56199,15 +56199,6 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/oldchurch)
-"nzI" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm)
 "nzK" = (
 /obj/effect/turf_decal/bordur,
 /obj/effect/landmark/npcwall,
@@ -60767,15 +60758,6 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/chantry)
-"oCU" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/plating/sidewalk/poor,
-/area/vtm)
 "oCV" = (
 /obj/effect/turf_decal/siding/grey/corner{
 	dir = 4
@@ -65919,9 +65901,7 @@
 /obj/structure/chair/sofa/right/brown{
 	color = "#004136"
 	},
-/turf/open/misc/cn_roof/red{
-	dir = 10
-	},
+/turf/open/floor/wood/tile,
 /area/vtm/interior/laundromat)
 "pRj" = (
 /obj/machinery/light/small/directional/east,
@@ -93209,9 +93189,7 @@
 	pixel_y = 0
 	},
 /obj/effect/turf_decal/siding/dark_brown,
-/turf/open/misc/cn_roof/red{
-	dir = 8
-	},
+/turf/open/floor/wood/tile,
 /area/vtm/interior/laundromat)
 "wve" = (
 /obj/machinery/washing_machine,
@@ -280499,7 +280477,7 @@ ruG
 ruG
 ruG
 ruG
-oCU
+pnE
 ntq
 ntq
 ntq
@@ -280756,7 +280734,7 @@ kno
 kno
 kno
 kno
-cEq
+foR
 ntq
 ntq
 ntq
@@ -281013,7 +280991,7 @@ kno
 kno
 kno
 kno
-cEq
+foR
 ntq
 ntq
 ntq
@@ -281270,7 +281248,7 @@ kno
 kno
 kno
 pEQ
-cEq
+foR
 ntq
 ntq
 ntq
@@ -281527,7 +281505,7 @@ kno
 kno
 kno
 kno
-cEq
+foR
 ntq
 ntq
 ntq
@@ -281784,7 +281762,7 @@ kno
 kno
 kno
 pEQ
-cEq
+foR
 ntq
 ntq
 ntq
@@ -282041,7 +282019,7 @@ cEq
 cEq
 cEq
 cEq
-nzI
+wVk
 ntq
 ntq
 ntq
