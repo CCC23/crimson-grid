@@ -1,7 +1,7 @@
 /datum/discipline/path_of_earth
 	name = "Path of Earth"
-	desc = {"Makes all humans in radius mentally ill for a moment, supressing their defending ability.
-	● Passion: Charisma + Empathy
+	desc = {"Gives Power over the earth allowing one to use it to immobilize their enemies
+	● Grasp of Earth: Charisma + Empathy
 	●● The Haunting: Manipulation + Subterfuge
 	●●● Eyes of Chaos: Perception + Occult
 	●●●● Voice of Madness: Manipulation + Empathy
@@ -26,52 +26,27 @@
 	check_flags = DISC_CHECK_CAPABLE | DISC_CHECK_SEE
 	target_type = TARGET_LIVING
 	range = 7
-	vitae_cost = 0
+	vitae_cost = 1
 
-	aggravating = TRUE
+	aggravating = FALSE
 	hostile = TRUE
 	violates_masquerade = TRUE
-	frenzy_usable = FALSE
 
 	multi_activate = TRUE
-	duration_length = 5 SECONDS
-	cooldown_length = 5 SECONDS
+	duration_length = 1.5 SECONDS
+	cooldown_length = 40 SECONDS
 
-/datum/discipline_power/path_of_earth/grasp_of_earth/proc/immobilize_target(mob/living/target, duration = 5 SECONDS)
+/datum/discipline_power/path_of_earth/grasp_of_earth/proc/immobilize_target(mob/living/target, duration = 1.5 SECONDS)
 	ADD_TRAIT(target, TRAIT_IMMOBILIZED, DISCIPLINE_TRAIT(type))
-	RegisterSignals(target, list(COMSIG_ATOM_ATTACKBY, COMSIG_MOB_ITEM_ATTACK, COMSIG_PROJECTILE_PREHIT), PROC_REF(on_target_attacked))
-	if(do_after(owner, duration, target))
-		release_target(target)
-		return TRUE
-	else
-		release_target(target)
-		return FALSE
 
-///datum/discipline_power/serpentis/the_eyes_of_the_serpent/proc/on_target_attacked(datum/source)
-//	SIGNAL_HANDLER
-//	var/mob/living/target = source
-//	release_target(target)
-//	to_chat(owner, span_warning("Your concentration is broken as [target] is attacked!"))
-//	to_chat(target, span_warning("The mental hold on you breaks as you're attacked!"))
-
-//datum/discipline_power/serpentis/the_eyes_of_the_serpent/proc/release_target(mob/living/target)
-//	UnregisterSignal(target, list(COMSIG_ATOM_ATTACKBY, COMSIG_MOB_ITEM_ATTACK, COMSIG_PROJECTILE_PREHIT))
-//	to_chat(target, span_danger("You feel your concentration become your own once more, able to look away from the commanding gaze."))
+/datum/discipline_power/path_of_earth/grasp_of_earth/proc/release_target(mob/living/target)
+	to_chat(target, span_danger("You feel the earth fall away you are able to move again"))
 	REMOVE_TRAIT(target, TRAIT_IMMOBILIZED, DISCIPLINE_TRAIT(type))
-
-/datum/discipline_power/path_of_earth/grasp_of_earth/can_activate_untargeted(alert)
-	. = ..()
-	if (owner?.is_eyes_covered())
-		if (alert)
-			to_chat(owner, span_warning("You cannot use [name] with your eyes covered!"))
-		. = FALSE
-	return .
 
 /datum/discipline_power/path_of_earth/grasp_of_earth/activate(mob/living/target)
 	. = ..()
-	target.face_atom(owner)
 	target.visible_message(span_hypnophrase("<b>The earth grasps [target] immobilizing them</b>"), span_warning("<b>The earth grasps you immobilzing you</b>"))
-	if(ishuman(target))
+	immobilize_target(target)
 //		var/mob/living/carbon/human/H = target
 //		H.remove_overlay(POWERS_LAYER)
 //		var/mutable_appearance/serpentis_overlay = mutable_appearance('modular_darkpack/modules/powers/icons/serpentis.dmi', "serpentis", -POWERS_LAYER)
@@ -82,6 +57,51 @@
 /datum/discipline_power/path_of_earth/grasp_of_earth/deactivate(mob/living/target)
 	. = ..()
 	release_target(target)
-	if (ishuman(target))
-		var/mob/living/carbon/human/human_target = target
-	//	human_target.remove_overlay(POWERS_LAYER)
+
+
+/datum/discipline_power/path_of_earth/endurance_of_stone
+	name = "Endurance of Stone"
+	desc = "Become as hard as stone. Let nothing bring you down"
+
+	level = 2
+	var/activating = FALSE
+	var/active_armor = FALSE
+	check_flags = DISC_CHECK_CONSCIOUS
+	vitae_cost = 2
+	toggled = TRUE
+	duration_length = 20 TURNS
+
+/datum/discipline_power/path_of_earth/endurance_of_stone/pre_activation_checks()
+	. = ..()
+	if(activating) // Prevent multi-activation while the do_after is ongoing
+		to_chat(owner, span_warning("You are already hardening your skin"))
+		return FALSE
+
+	activating = TRUE
+	to_chat(owner, span_warning("Your body starts to harden"))
+	if(do_after(owner, 1 TURNS, timed_action_flags = (IGNORE_USER_LOC_CHANGE | IGNORE_TARGET_LOC_CHANGE | IGNORE_HELD_ITEM)))
+		return TRUE
+
+/datum/discipline_power/path_of_earth/endurance_of_stone/activate()
+	. = ..()
+	activating = FALSE
+	var/roll = SSroll.storyteller_roll_datum(owner, difficulty = 7, applic_stats = list(STAT_PERMANENT_WILLPOWER))
+	switch(roll)
+		if(ROLL_SUCCESS)
+			active_armor = TRUE
+			owner.damage_resistance += 20
+			to_chat(owner, span_green("You successfuly harness the earth armoring yourself"))
+		if(ROLL_FAILURE)
+			to_chat(owner, span_warning("You fail to harness the earth"))
+			deactivate()
+		if(ROLL_BOTCH)
+			owner.apply_damage(20, BRUTE)
+			to_chat(owner, span_danger("The earth refuses your will injuring you"))
+			deactivate()
+
+/datum/discipline_power/path_of_earth/endurance_of_stone/deactivate()
+	. = ..()
+	if(!active_armor)
+		return
+	to_chat(owner, span_notice("The earth falls away from your body"))
+	owner.damage_resistance -= 20 // CRIMSON EDIT - Reduces Strength of Obetenebration 4
