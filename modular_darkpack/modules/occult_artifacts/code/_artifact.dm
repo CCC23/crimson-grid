@@ -150,8 +150,7 @@
 /obj/effect/spawner/random/occult/artifact
 	name = "random occult artifact"
 	loot = list(
-		/obj/effect/spawner/random/occult/artifact/vampire_only = 50,//Crimson Edit reduces spawn by 5 to make space for holy artifacts
-		/obj/effect/spawner/random/occult/artifact/holy_only = 5,//Crimson Edit adds holy artifact spawns
+		/obj/effect/spawner/random/occult/artifact/vampire_only = 55,
 		/obj/effect/spawner/random/occult/artifact/werewolf_only = 45,
 	)
 
