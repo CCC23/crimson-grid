@@ -165,11 +165,13 @@
 	loot = null
 	loot_subtype_path = /obj/item/occult_artifact/vampire
 
+
 /obj/effect/spawner/random/occult/artifact/werewolf_only
 	name = "random garou fetish"
 	loot = list(
 		/obj/item/occult_artifact/werewolf/nyxs_bangle = 33,
-		/obj/item/occult_artifact/werewolf/dagger_of_retribution = 33,
+		/obj/item/occult_artifact/werewolf/dagger_of_retribution = 30,//Crimson edit reduced by 3 when inqusitor relic is removed increase back to 3
+		/obj/item/occult_artifact/holy/inquisitors_relic = 3, // Crimson Edit added new artifact to werewolf spawn temporarily until other artifacts are made to make own spawner
 		/obj/item/occult_artifact/werewolf/magpies_ears = 33,
 		/obj/effect/spawner/random/occult/artifact/klaive = 1,
 	)
