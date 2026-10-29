@@ -7,7 +7,8 @@
 	clan_disciplines = list(
 		/datum/discipline/auspex,
 		/datum/discipline/animalism,
-		/datum/discipline/dominate
+		/datum/discipline/dominate,
+		/datum/discipline/path_of_earth//Crimson edit adds path of earth
 	)
 	male_clothes = /obj/item/clothing/under/vampire/sport
 	female_clothes = /obj/item/clothing/under/vampire/red
